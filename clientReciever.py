@@ -15,7 +15,7 @@ class ClientReciever(threading.Thread):
     def run(self):
         while True:
             time.sleep(0.07)
-            data = self.mySocket.recv(32768)
+            data = self.mySocket.recv(1024)
             try:
                 data = pickle.loads(data)
             except:

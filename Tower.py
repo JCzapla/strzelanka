@@ -12,7 +12,7 @@ class Tower(pygame.sprite.Sprite):
 
         self.width = 80
         self.height=35
-        self.bullet_speed = 10
+        self.bullet_speed = 30
         self.hasBullet = False
         self.isDestroyed = False
 

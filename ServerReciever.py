@@ -18,7 +18,7 @@ class ServerReciever(threading.Thread):
         while True:
                 time.sleep(0.05)
                 # data2 = clients.recv(8192)
-                data = self.clientList[1].recv(8192)
+                data = self.clientList[1].recv(1024)
                 data = pickle.loads(data)
                 for towers in data:
                     if isinstance(towers, Tower.Tower) or isinstance(towers, Bot.Bot):

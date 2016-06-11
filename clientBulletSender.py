@@ -27,7 +27,7 @@ class ClientBulletSender(threading.Thread):
 
     def run(self):
         while True:
-                time.sleep(0.15)
+                time.sleep(0.10)
                 while self.game.shouldSend is True:
                     self.mySocket.send(pickle.dumps(self.game.sbulletList))
                     self.game.shouldSend = False

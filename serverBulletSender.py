@@ -19,7 +19,7 @@ class ServerBulletSender(threading.Thread):
     def run(self):
         toSend = True
         while True:
-            time.sleep(0.15)
+            time.sleep(0.10)
             if self.game.shouldSend is True:
                 for clients in self.clientList:
                     toSend = False
